@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti, Mamá</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #faf6f0;
+            color: #2c2420;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 16px;
+        }
+
+        .container {
+            max-width: 560px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Lora', serif;
+            font-size: 2.3rem;
+            color: #8c2d2d;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #6e5d54;
+            margin-bottom: 28px;
+        }
+
+        .photo-card {
+            background: #ffffff;
+            padding: 14px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(44, 36, 32, 0.08);
+            margin-bottom: 32px;
+        }
+
+        .photo-card img {
+            width: 100%;
+            max-height: 320px;
+            object-fit: contain;
+            border-radius: 12px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .gifts {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: 32px;
+        }
+
+        .gift-item {
+            background: #ffffff;
+            border: 1.5px solid #e6ddd3;
+            border-radius: 16px;
+            padding: 18px 22px;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(44, 36, 32, 0.04);
+            text-align: left;
+        }
+
+        .gift-item:hover {
+            border-color: #c59b5f;
+            transform: translateY(-2px);
+        }
+
+        .gift-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 700;
+            color: #8c2d2d;
+            font-size: 1.05rem;
+        }
+
+        .gift-header span.tag {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #9a8679;
+            background: #f5efe6;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+
+        .gift-item.open {
+            background: #fffdf9;
+            border-color: #8c2d2d;
+            cursor: default;
+            transform: none;
+        }
+
+        .gift-item.open .gift-header {
+            display: none;
+        }
+
+        .gift-message {
+            display: none;
+            font-family: 'Lora', serif;
+            font-size: 1.08rem;
+            line-height: 1.6;
+            color: #2c2420;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .gift-item.open .gift-message {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .footer-santa {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding-top: 10px;
+        }
+
+        .footer-santa img {
+            width: 150px;
+            height: auto;
+            border-radius: 14px;
+            box-shadow: 0 6px 16px rgba(44, 36, 32, 0.1);
+        }
+
+        .footer-santa p {
+            font-family: 'Lora', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #5c4b42;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Feliz Navidad, Mamá</h1>
+        <p class="subtitle">Toca cada regalo para abrirlo</p>
+
+        <div class="photo-card">
+            <img src="https://tse2.mm.bing.net/th/id/OIP.YY0F_1UwbSp-v3iMCe9XbwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Feliz Navidad Mamá">
+        </div>
+
+        <div class="gifts">
+            <div class="gift-item" onclick="this.classList.add('open')">
+                <div class="gift-header">
+                    <span>🎁 Regalo 1</span>
+                    <span class="tag">Abrir</span>
+                </div>
+                <div class="gift-message">
+                    Gracias por cuidarme siempre y por estar ahí en cada momento en que te he necesitado.
+                </div>
+            </div>
+
+            <div class="gift-item" onclick="this.classList.add('open')">
+                <div class="gift-header">
+                    <span>🎁 Regalo 2</span>
+                    <span class="tag">Abrir</span>
+                </div>
+                <div class="gift-message">
+                    Gracias por tu paciencia, tus consejos y por enseñarme a salir adelante pase lo que pase.
+                </div>
+            </div>
+
+            <div class="gift-item" onclick="this.classList.add('open')">
+                <div class="gift-header">
+                    <span>🎁 Regalo 3</span>
+                    <span class="tag">Abrir</span>
+                </div>
+                <div class="gift-message">
+                    Eres el pilar de nuestra familia y mi mayor ejemplo. Te quiero muchísimo.
+                </div>
+            </div>
+
+            <div class="gift-item" onclick="this.classList.add('open')">
+                <div class="gift-header">
+                    <span>🎁 Regalo 4</span>
+                    <span class="tag">Abrir</span>
+                </div>
+                <div class="gift-message">
+                    Que esta Navidad te traiga mucha paz, salud y toda la felicidad que te mereces.
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-santa">
+            <img src="https://media1.tenor.com/m/3NdPJDDusQsAAAAC/santa-santa-claus.gif" alt="Santa Claus">
+            <p>Con todo mi cariño, hoy y siempre ❤️</p>
+        </div>
+    </div>
+
+</body>
+</html>
